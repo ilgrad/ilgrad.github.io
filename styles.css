@@ -54,8 +54,6 @@ h1 span { color: var(--accent); }
 .text-link { display: inline-flex; gap: 14px; align-items: center; font-size: 12px; font-weight: 550; }
 .text-link:hover { color: var(--accent); }
 .hero-meta { display: flex; gap: 19px; align-items: center; flex-wrap: wrap; color: var(--muted); font: 10px/1.5 var(--mono); margin-top: 41px; }
-.location { display: inline-flex; gap: 6px; align-items: center; border-left: 1px solid var(--line); padding-left: 18px; }
-.location svg { width: 13px; height: 13px; stroke: currentColor; }
 .data-sketch { min-width: 0; align-self: center; padding-top: 5px; }
 .sketch-heading { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 0 10px 20px; }
 .sketch-heading .eyebrow { color: var(--accent); font-size: 9px; }
@@ -122,12 +120,40 @@ h2 span { color: var(--muted); }
 .exploration-arrow { color: var(--accent); font-size: 19px; transition: transform .2s; }
 .exploration:hover h4 { color: var(--accent); }
 .exploration:hover .exploration-arrow { transform: translate(3px, -3px); }
-.about-section { display: grid; grid-template-columns: 1fr 1.12fr; gap: 80px; padding-block: 115px 100px; }
+.about-section { display: grid; grid-template-columns: 1fr 1.12fr; grid-template-areas: "intro copy" "career copy" "background background"; grid-template-rows: auto 1fr auto; gap: 42px 80px; align-items: start; padding-block: 115px 100px; }
+.about-intro { grid-area: intro; }
+.about-copy { grid-area: copy; }
 .about-intro h2 { font-size: 37px; line-height: 1.27; }
-.about-location { display: flex; gap: 9px; align-items: center; color: var(--muted); font: 10px var(--mono); margin-top: 27px; }
 .about-copy > p { font-size: 13px; color: var(--muted); margin-bottom: 17px; line-height: 1.85; }
 .about-copy .about-lead { font-size: 17px; color: #dce2d3; line-height: 1.75; margin-bottom: 21px; }
 .about-topics { display: flex; flex-wrap: wrap; gap: 10px 23px; color: var(--accent); font: 9px/1.7 var(--mono); margin-top: 28px; }
+.expertise-list { margin: 25px 0; border-top: 1px solid var(--line); }
+.expertise-list > div { padding-block: 14px; border-bottom: 1px solid var(--line); }
+.expertise-list dt { color: #dce2d3; font-size: 12px; font-weight: 650; }
+.expertise-list dd { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.career-summary { grid-area: career; }
+.career-summary > .eyebrow { color: var(--accent); font-weight: 400; }
+.career-list { list-style: none; margin: 23px 0 3px; padding: 0; }
+.career-list li { position: relative; margin-left: 3px; padding: 0 0 24px 22px; border-left: 1px solid var(--line); }
+.career-list li::before { content: ""; position: absolute; left: -3px; top: 4px; width: 5px; height: 5px; border-radius: 50%; background: #819669; }
+.career-list li:first-child::before { background: var(--accent); }
+.career-list li:last-child { border-color: transparent; padding-bottom: 15px; }
+.career-list .career-date { color: var(--muted); font: 9px/1.5 var(--mono); }
+.career-list h4 { font-size: 14px; font-weight: 600; margin-block: 5px 3px; }
+.career-list p:not(.career-date) { color: var(--muted); font-size: 11px; line-height: 1.8; max-width: 360px; }
+.career-list .career-detail { margin-top: 3px; }
+.career-summary > .text-link { font-size: 11px; }
+.about-background { grid-area: background; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+.about-background .eyebrow { color: var(--accent); font-size: 9px; font-weight: 400; margin-bottom: 15px; }
+.about-background h4 { font-size: 14px; font-weight: 550; line-height: 1.6; margin-bottom: 7px; }
+.about-background p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.about-background p.career-location { font: 10px/1.8 var(--mono); color: var(--muted); margin-block: 5px 8px; }
+.background-links { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 12px; font-size: 11px; }
+.background-links a { display: inline-flex; align-items: center; gap: 8px; padding-block: 5px; }
+.background-links span { color: var(--accent); }
+.background-links a:hover, .copr-projects a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.about-background .copr-projects { display: flex; gap: 10px; align-items: center; font: 10px/1.8 var(--mono); margin-top: 5px; }
+.copr-projects a { padding-block: 5px; }
 .contact-section { display: flex; justify-content: space-between; gap: 60px; border-top: 1px solid var(--line); padding-block: 64px 74px; }
 .contact-section h2 { font-size: 31px; }
 .contact-section p:not(.eyebrow) { margin-top: 12px; font-size: 14px; color: var(--muted); }
@@ -151,7 +177,8 @@ h2 span { color: var(--muted); }
   .focus-strip > div { gap: 18px; font-size: 10px; }
   .research-content { padding: 23px; }
   .project-kind { max-width: 70px; }
-  .about-section { gap: 50px; }
+  .about-section { gap: 38px 50px; }
+  .about-background { gap: 24px; }
   .about-intro h2 { font-size: 33px; }
 }
 @media (max-width: 760px) {
@@ -165,7 +192,6 @@ h2 span { color: var(--muted); }
   .hero-description { max-width: 490px; margin-top: 24px; }
   .hero-actions { gap: 28px; margin-top: 27px; }
   .hero-meta { margin-top: 29px; gap: 12px; font-size: 9px; }
-  .location { padding-left: 12px; }
   .data-sketch { width: 100%; max-width: 470px; justify-self: center; }
   .sketch-heading { flex-wrap: nowrap; padding-bottom: 12px; }
   .sketch-footer { flex-wrap: nowrap; margin-top: 5px; }
@@ -198,11 +224,16 @@ h2 span { color: var(--muted); }
   .exploration h4 { font-size: 13px; }
   .exploration p { font-size: 11px; }
   .exploration-field { display: none; }
-  .about-section { grid-template-columns: 1fr; gap: 34px; padding-block: 67px; }
+  .about-section { grid-template-columns: 1fr; grid-template-areas: "intro" "copy" "career" "background"; grid-template-rows: none; gap: 34px; padding-block: 67px; }
   .about-intro h2 { font-size: 35px; }
-  .about-location { margin-top: 20px; }
   .about-copy .about-lead { font-size: 17px; }
   .about-copy > p { font-size: 13px; }
+  .career-list p:not(.career-date) { max-width: none; font-size: 12px; }
+  .career-list .career-date { font-size: 10px; }
+  .career-summary > .text-link { min-height: 44px; }
+  .about-background { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .about-background .eyebrow { margin-bottom: 10px; }
+  .background-links a, .copr-projects a { min-height: 34px; }
   .contact-section { flex-direction: column; gap: 30px; padding-block: 45px; }
   .contact-section h2 { max-width: 360px; font-size: 30px; }
   .contact-links { width: 100%; gap: 14px 30px; }
