@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111510">
+  <title>Ilia Gradina — Data science, research &amp; open source</title>
+  <meta name="description" content="Ilia Gradina, Senior Data Scientist in Cyprus. Exploring astrodynamics, causal systems, and fast scientific tools in Rust and Python.">
+  <link rel="canonical" href="https://ilgrad.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ilia Gradina — Finding structure in complex data">
+  <meta property="og:description" content="Data science, research, and open-source tools. SpaceDataLab, CausalDyn, betula-cluster, and lexindex.">
+  <meta property="og:url" content="https://ilgrad.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="identity" href="#" aria-label="Ilia Gradina, home"><span class="monogram" aria-hidden="true">ig<span>/</span></span><span>Ilia Gradina</span></a>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="https://github.com/ilgrad" class="nav-github">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Data scientist · Researcher · Builder</p>
+        <h1 id="hero-title">Finding structure<br>in <span>complex data.</span></h1>
+        <p class="hero-description">I’m Ilia. I turn mathematical ideas into working software — from causal dynamics and satellite orbits to fast tools for scientific Python.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>Senior Data Scientist @ inDrive</span><span class="location"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="7" r="2"/><path d="M13 7c0 4-5 7-5 7S3 11 3 7a5 5 0 1 1 10 0Z"/></svg>Cyprus</span></div>
+      </div>
+      <div class="data-sketch">
+        <div class="sketch-heading"><span class="eyebrow">Field notes / 001</span><span class="sketch-state" id="sketch-state">Unlabelled observations</span></div>
+        <svg id="cluster-plot" class="cluster-plot" viewBox="0 0 440 344" role="img" aria-labelledby="plot-title plot-description">
+          <title id="plot-title">A sketch of structure in data</title><desc id="plot-description">A synthetic point cloud. Reveal clusters to colour its points using a small k-means demonstration.</desc>
+          <defs><pattern id="plot-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2b3328" stroke-width=".65"/></pattern></defs>
+          <rect x="20" y="12" width="400" height="320" fill="url(#plot-grid)"/>
+          <path d="M20 32V12H40M400 12H420V32M20 312V332H40M400 332H420V312" fill="none" stroke="#697460"/>
+          <g id="cluster-guides" fill="none" stroke="#c2e898" stroke-opacity=".25" stroke-dasharray="3 6"><ellipse cx="130" cy="113" rx="86" ry="60" transform="rotate(-25 130 113)"/><ellipse cx="311" cy="138" rx="63" ry="89" transform="rotate(24 311 138)"/><ellipse cx="204" cy="259" rx="89" ry="47" transform="rotate(8 204 259)"/></g>
+          <g id="plot-points" fill="#c2e898"><circle cx="130" cy="113" r="4"/><circle cx="311" cy="138" r="4"/><circle cx="204" cy="259" r="4"/></g>
+          <g id="plot-centres" aria-hidden="true"></g>
+        </svg>
+        <div class="sketch-footer"><p id="sketch-caption" aria-live="polite">A little hidden order.</p><button id="cluster-toggle" type="button" aria-pressed="false" hidden>Reveal clusters <span aria-hidden="true">↗</span></button></div>
+        <p class="sketch-note">K-means sketch · synthetic data<noscript> · enable JavaScript to explore</noscript></p>
+      </div>
+    </section>
+    <div class="focus-strip wrap" aria-label="Areas of interest"><span class="eyebrow">At the intersection of</span><div><span>Scientific computing</span><span class="strip-divider" aria-hidden="true">/</span><span>Causal inference</span><span class="strip-divider" aria-hidden="true">/</span><span>Systems engineering</span></div></div>
+
+    <section class="work-section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow section-number">01 / Selected work</p><h2 id="work-title">Big questions. <span>Working code.</span></h2></div><p>Independent projects at the boundary<br class="desktop-break"> of research and engineering.</p></div>
+      <div class="research-grid">
+        <article class="research-card space-card">
+          <div class="project-visual orbit-visual" aria-hidden="true">
+            <div class="visual-topline"><span>01 — Space systems</span><span>r̈ = f(r, ṙ, t)</span></div>
+            <svg viewBox="0 0 530 250" fill="none">
+              <defs><radialGradient id="planet-shade" cx="32%" cy="25%" r="80%"><stop stop-color="#334c3c"/><stop offset="1" stop-color="#18251d"/></radialGradient><pattern id="space-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#879c86" opacity=".25"/></pattern></defs>
+              <rect width="530" height="250" fill="url(#space-grid)"/>
+              <path d="M62 127H468M265 15V236" stroke="#92ab8c" stroke-opacity=".15" stroke-dasharray="3 5"/>
+              <ellipse cx="265" cy="125" rx="194" ry="57" transform="rotate(-23 265 125)" stroke="#b8dca0" stroke-opacity=".52"/><ellipse cx="265" cy="125" rx="160" ry="92" transform="rotate(27 265 125)" stroke="#86b397" stroke-opacity=".32"/>
+              <circle cx="265" cy="125" r="66" fill="url(#planet-shade)" stroke="#8cac80" stroke-opacity=".5"/>
+              <ellipse cx="265" cy="125" rx="29" ry="66" stroke="#a8c59a" stroke-opacity=".28" transform="rotate(-17 265 125)"/><ellipse cx="265" cy="125" rx="56" ry="66" stroke="#a8c59a" stroke-opacity=".18" transform="rotate(-17 265 125)"/><ellipse cx="265" cy="125" rx="66" ry="22" stroke="#a8c59a" stroke-opacity=".3" transform="rotate(-17 265 125)"/>
+              <path d="M201 110c25 10 70-1 109-29M219 169c24 1 66-9 108-38" stroke="#a8c59a" stroke-opacity=".2"/><path d="M280 183c54-12 115-41 149-71" stroke="#c4e5a9" stroke-width="1.5"/>
+              <circle cx="421" cy="119" r="4" fill="#c2e898"/><circle cx="421" cy="119" r="10" stroke="#c2e898" stroke-opacity=".25"/><path d="M421 105V73H373" stroke="#99b78b" stroke-opacity=".6"/><text x="328" y="68" fill="#b5c6aa" font-family="monospace" font-size="9" letter-spacing="1">ORBIT / 001</text><circle cx="140" cy="65" r="3" fill="#87ae97"/>
+            </svg>
+            <div class="visual-bottomline"><span>Astrodynamics → Earth observation</span><span>RUST</span></div>
+          </div>
+          <div class="research-content">
+            <div class="project-title-row"><h3>SpaceDataLab</h3><span class="project-kind">Research initiative</span></div>
+            <p class="project-subtitle">Precision, from orbit to observation.</p>
+            <p class="project-description">A Rust-based astrodynamics stack spanning orbit propagation, GNSS, constellation design, and Earth-observation geometry. Grounded in the primary literature.</p>
+            <ul class="tags" aria-label="SpaceDataLab topics"><li>Rust</li><li>Astrodynamics</li><li>Earth observation</li></ul>
+            <div class="project-links"><a href="https://spacedatalab.org/">Explore SpaceDataLab <span aria-hidden="true">↗</span></a><a href="https://github.com/SpaceDataLab">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="research-card causal-card">
+          <div class="project-visual causal-visual" aria-hidden="true">
+            <div class="visual-topline"><span>02 — Causal systems</span><span>ẋ = f + rθ</span></div>
+            <svg viewBox="0 0 530 250" fill="none">
+              <defs><pattern id="causal-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#aab498" opacity=".2"/></pattern><marker id="causal-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#b3c692"/></marker></defs>
+              <rect width="530" height="250" fill="url(#causal-grid)"/>
+              <g stroke="#b3c692" stroke-opacity=".55" marker-end="url(#causal-arrow)"><path d="M115 135H214"/><path d="M284 135H408"/><path d="M262 65L416 118" stroke-dasharray="4 5"/><path d="M239 72V108" stroke-dasharray="4 5"/><path d="M431 163V206H97V159"/></g>
+              <rect x="215" y="108" width="70" height="54" rx="4" fill="#273025" stroke="#b7cf95" stroke-opacity=".7"/><circle cx="91" cy="135" r="24" fill="#222a20" stroke="#91a580"/><circle cx="435" cy="135" r="27" fill="#303a28" stroke="#c2d59f"/><circle cx="239" cy="51" r="20" fill="#1b2119" stroke="#96a783" stroke-dasharray="3 4"/>
+              <g fill="#d0ddbc" font-family="monospace" font-size="15" text-anchor="middle"><text x="91" y="140">u</text><text x="250" y="141">f + rθ</text><text x="435" y="140">x′</text><text x="239" y="56" fill="#9aa98c">z</text></g>
+              <g fill="#a9b39a" font-family="monospace" font-size="9" letter-spacing="1" text-anchor="middle"><text x="91" y="95">INTERVENE</text><text x="342" y="123">DYNAMICS</text><text x="435" y="92">OBSERVE</text><text x="262" y="226">FEEDBACK / CONSTRAINED CONTROL</text></g>
+            </svg>
+            <div class="visual-bottomline"><span>Observation → Intervention → Control</span><span>JAX / PYTHON</span></div>
+          </div>
+          <div class="research-content">
+            <div class="project-title-row"><h3>CausalDyn</h3><span class="project-kind">Research software</span></div>
+            <p class="project-subtitle">Learn the dynamics. Make better decisions.</p>
+            <p class="project-description">Causal learning meets physics-structured models and constrained control. Research tools and benchmarks that evaluate both prediction quality and the decisions that follow.</p>
+            <ul class="tags" aria-label="CausalDyn topics"><li>Causal inference</li><li>JAX</li><li>Optimal control</li></ul>
+            <div class="project-links"><a href="https://github.com/causaldyn">Explore CausalDyn <span aria-hidden="true">↗</span></a><a href="https://github.com/causaldyn/causaldyn-bench">Benchmarks <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="subsection-heading"><h3>Tools for the working scientist</h3><span class="eyebrow">Rust performance. Python ergonomics.</span></div>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><g fill="currentColor"><circle cx="8" cy="10" r="2"/><circle cx="15" cy="7" r="2"/><circle cx="11" cy="17" r="2"/><circle cx="22" cy="21" r="2"/><circle cx="29" cy="18" r="2"/><circle cx="26" cy="28" r="2"/></g><path d="M8 10L15 7L11 17Z M22 21L29 18L26 28Z" stroke="currentColor" stroke-opacity=".4"/></svg><span class="eyebrow">01 / Clustering</span></div>
+          <h4>betula-cluster</h4><p>Turn large embedding datasets into compact, numerically stable microclusters. A Rust core with a scikit-learn-style Python API.</p>
+          <ul class="tags" aria-label="betula-cluster technologies"><li>Rust + Python</li><li>Streaming</li><li>Machine learning</li></ul>
+          <div class="project-links"><a href="https://github.com/ilgrad/betula-cluster">Source code <span aria-hidden="true">↗</span></a><a href="https://ilgrad.github.io/betula-cluster/">Documentation <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="tool-card">
+          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M8 8H18V18H28M18 18H8M18 18V28H28" stroke="currentColor" stroke-opacity=".65"/><path d="M5 5H11V11H5Z M25 15H31V21H25Z M5 15H11V21H5Z M25 25H31V31H25Z" fill="var(--panel)" stroke="currentColor"/></svg><span class="eyebrow">02 / Indexing</span></div>
+          <h4>lexindex</h4><p>Compact string-to-ID indexes built in Rust. Fast lookups, prefix and fuzzy search, with memory-mapped storage and Python bindings.</p>
+          <ul class="tags" aria-label="lexindex technologies"><li>Rust + Python</li><li>FST / MPH</li><li>Data infrastructure</li></ul>
+          <div class="project-links"><a href="https://github.com/ilgrad/lexindex">Source code <span aria-hidden="true">↗</span></a><a href="https://ilgrad.github.io/lexindex/">Documentation <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+      <div class="subsection-heading explorations-heading"><h3>Further explorations</h3><a class="text-link" href="https://github.com/ilgrad?tab=repositories">All repositories <span aria-hidden="true">↗</span></a></div>
+      <a class="exploration" href="https://github.com/ilgrad/large-wave-effect"><span class="exploration-index">01</span><div><h4>Large Wave Effect</h4><p>How a local impulse becomes a large wave in a discrete chain.</p></div><span class="exploration-field">Mathematical research</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+      <a class="exploration" href="https://github.com/ilgrad/overnight-finance-classification"><span class="exploration-index">02</span><div><h4>Overnight Finance Classification</h4><p>Ensembles and calibration for imbalanced financial time series.</p></div><span class="exploration-field">Applied machine learning</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <div class="about-intro"><p class="eyebrow section-number">02 / A bit about me</p><h2 id="about-title">Curiosity, with<br><span>an implementation.</span></h2><p class="about-location"><span class="status-dot" aria-hidden="true"></span> Based in Cyprus</p></div>
+      <div class="about-copy"><p class="about-lead">I’m Ilia Gradina, a Senior Data Scientist at inDrive. My independent work connects mathematical research with practical scientific software.</p><p>I’m interested in what lies beneath an observation: the structure in a dataset, the dynamics of a physical system, or the causal effect of a decision.</p><p>I work across Python and Rust, building tools that make those ideas usable — with attention to numerical stability, reproducibility, and clear interfaces.</p><div class="about-topics"><span>Scientific Python</span><span>Rust</span><span>Dynamical systems</span><span>Causal inference</span></div></div>
+    </section>
+    <section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow section-number">03 / Elsewhere</p><h2 id="contact-title">Have an interesting problem?</h2><p>I’d love to hear about it.</p></div><div class="contact-links"><a href="https://www.linkedin.com/in/ilgrad/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://t.me/ilgrad">Telegram <span aria-hidden="true">↗</span></a><a href="https://medium.com/@ilgrad">Writing on Medium <span aria-hidden="true">↗</span></a><a href="https://github.com/ilgrad">GitHub <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer wrap"><span>© <span id="year">2026</span> Ilia Gradina</span><span class="footer-note">Always curious. Usually building.</span><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
