@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111510">
+  <meta name="theme-color" content="#ff8a00">
   <title>Ilia Gradina — Computer vision, research &amp; open source</title>
   <meta name="description" content="Ilia Gradina — Senior Data Scientist in Computer Vision at inDrive. Applied mathematics, scientific software, and open-source contributions.">
   <link rel="canonical" href="https://ilgrad.github.io/">
@@ -12,6 +12,7 @@
   <meta property="og:description" content="Computer vision at inDrive. Independent research in causal dynamics and astrodynamics. Scientific tools in Python and Rust, and contributions to Fedora.">
   <meta property="og:url" content="https://ilgrad.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/fredoka-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
@@ -23,69 +24,162 @@
     <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="https://github.com/ilgrad" class="nav-github">GitHub <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Data scientist · Researcher · Builder</p>
-        <h1 id="hero-title">Finding structure<br>in <span>complex data.</span></h1>
-        <p class="hero-description">I’m Ilia. I build computer vision systems at inDrive and independent research software — connecting applied mathematics, causal dynamics, and scientific computing.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-meta"><span>Senior Data Scientist @ inDrive</span></div>
-      </div>
-      <div class="data-sketch">
-        <div class="sketch-heading"><span class="eyebrow">Field notes / 001</span><span class="sketch-state" id="sketch-state">Unlabelled observations</span></div>
-        <svg id="cluster-plot" class="cluster-plot" viewBox="0 0 440 344" role="img" aria-labelledby="plot-title plot-description">
-          <title id="plot-title">A sketch of structure in data</title><desc id="plot-description">A synthetic point cloud. Reveal clusters to colour its points using a small k-means demonstration.</desc>
-          <defs><pattern id="plot-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2b3328" stroke-width=".65"/></pattern></defs>
-          <rect x="20" y="12" width="400" height="320" fill="url(#plot-grid)"/>
-          <path d="M20 32V12H40M400 12H420V32M20 312V332H40M400 332H420V312" fill="none" stroke="#697460"/>
-          <g id="cluster-guides" fill="none" stroke="#c2e898" stroke-opacity=".25" stroke-dasharray="3 6"><ellipse cx="130" cy="113" rx="86" ry="60" transform="rotate(-25 130 113)"/><ellipse cx="311" cy="138" rx="63" ry="89" transform="rotate(24 311 138)"/><ellipse cx="204" cy="259" rx="89" ry="47" transform="rotate(8 204 259)"/></g>
-          <g id="plot-points" fill="#c2e898"><circle cx="130" cy="113" r="4"/><circle cx="311" cy="138" r="4"/><circle cx="204" cy="259" r="4"/></g>
-          <g id="plot-centres" aria-hidden="true"></g>
-        </svg>
-        <div class="sketch-footer"><p id="sketch-caption" aria-live="polite">A little hidden order.</p><button id="cluster-toggle" type="button" aria-pressed="false" hidden>Reveal clusters <span aria-hidden="true">↗</span></button></div>
-        <p class="sketch-note">K-means sketch · synthetic data<noscript> · enable JavaScript to explore</noscript></p>
-      </div>
-    </section>
-    <div class="focus-strip wrap" aria-label="Areas of interest"><span class="eyebrow">At the intersection of</span><div><span>Computer vision</span><span class="strip-divider" aria-hidden="true">/</span><span>Applied mathematics</span><span class="strip-divider" aria-hidden="true">/</span><span>Scientific computing</span></div></div>
+    <div class="hero-band">
+      <div class="sun" aria-hidden="true"></div>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow greeting"><span lang="mi">Kia ora</span> <span aria-hidden="true">·</span> G’day <span aria-hidden="true">·</span> Hello</p>
+          <h1 id="hero-title">Finding structure<br>in <span>complex data.</span></h1>
+          <p class="hero-description">I’m Ilia. I build computer vision systems at inDrive and independent research software — connecting applied mathematics, causal dynamics, and scientific computing.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-meta"><span>Senior Data Scientist @ inDrive</span><span>Data scientist · Researcher · Builder</span></div>
+        </div>
+        <div class="scene">
+        <div class="landscape" aria-hidden="true">
+          <svg viewBox="0 0 1440 340" preserveAspectRatio="xMidYMax slice" stroke-linejoin="round" stroke-linecap="round">
+            <defs>
+              <g id="sheep">
+                <path d="M-11 13v10M-4 14v10M6 14v10M12 13v10" stroke="#14261a" stroke-width="3" fill="none"/>
+                <path d="M-16 7a7 7 0 0 1 4-12 8 8 0 0 1 13-4 8 8 0 0 1 12 4 7 7 0 0 1 2 11 7 7 0 0 1-10 5 8 8 0 0 1-12 0 7 7 0 0 1-9-4z" fill="#fff" stroke="#14261a" stroke-width="2.5"/>
+                <ellipse cx="17" cy="-2" rx="6.5" ry="8" fill="#14261a"/>
+                <circle cx="19.5" cy="-4" r="1.6" fill="#fff"/>
+              </g>
+              <g id="pohutukawa">
+                <path d="M-5 28C-5 12-9 2-19-12M5 28C7 10 13 0 23-14M0 28C0 12-1 0 0-16" stroke="#14261a" stroke-width="6" fill="none"/>
+                <path d="M-50-26C-62-40-48-58-32-54C-30-72-6-78 6-66C20-78 44-70 44-54C60-52 62-30 48-24C44-12 24-10 14-16C4-8-16-8-24-16C-34-10-48-14-50-26Z" fill="#0b6b2e" stroke="#14261a" stroke-width="3"/>
+                <g fill="#e3173e"><circle cx="-38" cy="-40" r="5"/><circle cx="-22" cy="-56" r="5.5"/><circle cx="-2" cy="-62" r="5"/><circle cx="20" cy="-60" r="5.5"/><circle cx="36" cy="-48" r="5"/><circle cx="46" cy="-34" r="4.5"/><circle cx="-40" cy="-24" r="4.5"/><circle cx="-22" cy="-32" r="5.5"/><circle cx="-4" cy="-42" r="5"/><circle cx="16" cy="-38" r="5.5"/><circle cx="32" cy="-26" r="5"/><circle cx="-8" cy="-20" r="4.5"/><circle cx="12" cy="-20" r="4"/></g>
+              </g>
+              <g id="kiwi">
+                <path d="M-5 14v13h-7M6 14v13h-7" stroke="#14261a" stroke-width="3" fill="none"/>
+                <path d="M-23 2c0-13 12-20 25-19 7-6 18-3 20 6 1 6-1 11-5 15-5 10-15 13-24 11-10-2-16-6-16-13z" fill="#7a4420" stroke="#14261a" stroke-width="3"/>
+                <path d="M22-7L56 5" stroke="#14261a" stroke-width="7" fill="none"/>
+                <path d="M22-7L56 5" stroke="#ffd9a0" stroke-width="3" fill="none"/>
+                <circle cx="14" cy="-9" r="2.4" fill="#14261a"/>
+              </g>
+            </defs>
+            <path d="M-20 214C160 138 322 128 500 190C664 246 800 128 1000 136C1190 144 1290 214 1460 168V360H-20Z" fill="#c9f03c" stroke="#14261a" stroke-width="3"/>
+            <use href="#sheep" transform="translate(1016 166) scale(.82)"/>
+            <use href="#sheep" transform="translate(1104 180) scale(-.76 .76)"/>
+            <use href="#sheep" transform="translate(300 134) scale(-.82 .82)"/>
+            <use href="#pohutukawa" transform="translate(736 156)"/>
+            <path d="M-20 260C200 186 420 210 620 246C820 282 1000 188 1216 204C1318 212 1400 232 1460 226V360H-20Z" fill="#83dd22" stroke="#14261a" stroke-width="3"/>
+            <use href="#sheep" transform="translate(796 240) scale(.95)"/>
+            <use href="#sheep" transform="translate(884 226)"/>
+            <use href="#sheep" transform="translate(112 204) scale(-.95 .95)"/>
+            <use class="kiwi-spot" href="#kiwi" transform="translate(632 222) scale(.92)"/>
+            <path d="M-20 286C240 252 520 270 780 278C1020 286 1240 252 1460 264V360H-20Z" fill="#3cc21e" stroke="#14261a" stroke-width="3"/>
+            <path d="M-20 300C110 284 230 314 360 298S610 284 730 298 980 314 1100 298 1340 284 1460 298V360H-20Z" fill="#00c2b2" stroke="#14261a" stroke-width="3"/>
+            <path d="M880 316c18-6 34-6 52 0M1120 324c14-5 28-5 42 0M520 322c16-5 30-5 46 0" stroke="#d6fff9" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+
+        <canvas class="fern" id="fern" aria-hidden="true"></canvas>
+
+        <div class="platypus-spot">
+          <p class="platypus-says" id="platypus-says" aria-live="polite" hidden>Boop me!</p>
+          <button class="platypus" id="platypus" type="button" aria-label="Boop the platypus for a fact" disabled>
+            <svg viewBox="0 0 400 210" fill="none" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+              <defs>
+                <clipPath id="pp-tail-clip"><path d="M124 100C92 82 40 80 16 96C3 106 5 124 21 131C47 142 98 138 130 122Z"/></clipPath>
+                <clipPath id="pp-body-clip"><path d="M104 112C104 76 146 50 200 48C228 47 244 58 260 58C272 58 276 44 296 44C312 44 322 56 326 72C332 92 324 112 304 122C292 128 282 128 272 134C244 152 206 158 168 154C128 150 104 138 104 112Z"/></clipPath>
+              </defs>
+              <g class="pp-tail">
+                <path d="M124 100C92 82 40 80 16 96C3 106 5 124 21 131C47 142 98 138 130 122Z" fill="#7a4420" stroke="#14261a" stroke-width="5"/>
+                <g clip-path="url(#pp-tail-clip)" stroke="#5a3016" stroke-width="2.5">
+                  <path d="M30 88L62 142M52 84L84 142M74 84L104 138M96 86L122 130"/>
+                  <path d="M12 112L50 84M24 134L76 84M50 140L100 88M78 140L124 100"/>
+                </g>
+              </g>
+              <path d="M130 128C124 152 112 170 98 178C108 180 114 178 119 185C126 180 134 182 141 187C145 180 153 180 161 183C154 170 152 150 154 128Z" fill="#ff7a00" stroke="#14261a" stroke-width="5"/>
+              <path d="M224 132C218 156 206 172 192 180C202 182 208 180 213 187C220 182 228 184 235 189C239 182 247 182 255 185C248 172 246 152 248 132Z" fill="#ff7a00" stroke="#14261a" stroke-width="5"/>
+              <path d="M104 112C104 76 146 50 200 48C228 47 244 58 260 58C272 58 276 44 296 44C312 44 322 56 326 72C332 92 324 112 304 122C292 128 282 128 272 134C244 152 206 158 168 154C128 150 104 138 104 112Z" fill="#a65f2a"/>
+              <g clip-path="url(#pp-body-clip)">
+                <path d="M100 136C156 116 240 128 340 96V170H100Z" fill="#edc08a"/>
+                <path d="M150 80q6-7 12 0M184 68q6-7 12 0M220 78q6-7 12 0M178 96q6-7 12 0" stroke="#7a4420" stroke-width="3.5"/>
+              </g>
+              <path d="M104 112C104 76 146 50 200 48C228 47 244 58 260 58C272 58 276 44 296 44C312 44 322 56 326 72C332 92 324 112 304 122C292 128 282 128 272 134C244 152 206 158 168 154C128 150 104 138 104 112Z" stroke="#14261a" stroke-width="5"/>
+              <g class="pp-bill">
+                <path d="M318 64C338 52 372 54 388 68C398 78 396 92 382 97C358 105 332 104 314 100C302 90 306 74 318 64Z" fill="#ff7a00" stroke="#14261a" stroke-width="5"/>
+                <path d="M328 66C342 60 360 62 372 69" stroke="#ffb163" stroke-width="5"/>
+                <path d="M311 88C334 95 364 91 391 78" stroke="#14261a" stroke-width="4"/>
+                <ellipse cx="352" cy="74" rx="3.6" ry="2.2" fill="#14261a"/>
+                <ellipse cx="365" cy="75" rx="3.6" ry="2.2" fill="#14261a"/>
+              </g>
+              <g class="pp-eye">
+                <circle cx="290" cy="69" r="11" fill="#fff" stroke="#14261a" stroke-width="4"/>
+                <circle cx="293" cy="69" r="6" fill="#14261a"/>
+                <circle cx="295.5" cy="66.5" r="2" fill="#fff"/>
+              </g>
+              <circle cx="288" cy="100" r="8" fill="#ff8fa3" opacity=".75"/>
+              <g class="pp-bubbles" fill="#d6fff9" stroke="#14261a" stroke-width="2.5">
+                <circle cx="372" cy="36" r="7"/><circle cx="346" cy="26" r="4.5"/><circle cx="388" cy="20" r="3.5"/>
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="water-front" aria-hidden="true">
+          <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M-20 22C110 8 230 36 360 22S610 8 730 22 980 36 1100 22 1340 8 1460 22V80H-20Z" fill="#00c2b2" fill-opacity=".62"/></svg>
+        </div>
+        </div>
+        <div class="sketch-slot">
+        <div class="data-sketch">
+          <div class="sketch-heading"><span class="eyebrow">Field notes / 001</span><span class="sketch-state" id="sketch-state">Unlabelled sheep</span></div>
+          <svg id="cluster-plot" class="cluster-plot" viewBox="0 0 440 344" role="img" aria-labelledby="plot-title plot-description">
+            <title id="plot-title">Counting sheep: a sketch of structure in data</title><desc id="plot-description">A synthetic point cloud drawn as a flock of sheep. Reveal flocks to colour them using a small k-means demonstration.</desc>
+            <rect x="4" y="4" width="432" height="336" rx="18" fill="#f4ffd9" stroke="#14261a" stroke-width="2.5"/>
+            <g id="cluster-guides" fill="none" stroke="#6f9a12" stroke-width="1.5" stroke-dasharray="3 6"><ellipse cx="130" cy="113" rx="86" ry="60" transform="rotate(-25 130 113)"/><ellipse cx="311" cy="138" rx="63" ry="89" transform="rotate(24 311 138)"/><ellipse cx="204" cy="259" rx="89" ry="47" transform="rotate(8 204 259)"/></g>
+            <g id="plot-points" fill="#ffffff" stroke="#14261a"><circle cx="130" cy="113" r="4"/><circle cx="311" cy="138" r="4"/><circle cx="204" cy="259" r="4"/></g>
+            <g id="plot-centres" aria-hidden="true"></g>
+          </svg>
+          <div class="sketch-footer"><p id="sketch-caption" aria-live="polite">A little hidden order.</p><button id="cluster-toggle" type="button" aria-pressed="false" hidden>Reveal flocks <span aria-hidden="true">↗</span></button></div>
+          <ul class="flock-legend" id="flock-legend" hidden></ul>
+          <p class="sketch-note" id="sketch-note">K-means sketch · synthetic sheep<noscript> · enable JavaScript to explore</noscript></p>
+        </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="focus-band"><div class="focus-strip wrap" aria-label="Areas of interest"><span class="eyebrow">At the intersection of</span><div><span>Computer vision</span><span class="strip-divider" aria-hidden="true">/</span><span>Applied mathematics</span><span class="strip-divider" aria-hidden="true">/</span><span>Scientific computing</span></div></div></div>
 
     <section class="work-section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><p class="eyebrow section-number">01 / Selected work</p><h2 id="work-title">Big questions. <span>Working code.</span></h2></div><p>Independent projects at the boundary<br class="desktop-break"> of research and engineering.</p></div>
       <div class="research-grid">
         <article class="research-card space-card">
           <div class="project-visual orbit-visual" aria-hidden="true">
-            <div class="visual-topline"><span>01 — Space systems</span><span>r̈ = f(r, ṙ, t)</span></div>
+            <div class="visual-topline"><span>01 — Space systems</span><span class="formula">r̈ = f(r, ṙ, t)</span></div>
             <svg viewBox="0 0 530 250" fill="none">
-              <defs><radialGradient id="planet-shade" cx="32%" cy="25%" r="80%"><stop stop-color="#334c3c"/><stop offset="1" stop-color="#18251d"/></radialGradient><pattern id="space-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#879c86" opacity=".25"/></pattern></defs>
-              <rect width="530" height="250" fill="url(#space-grid)"/>
-              <path d="M62 127H468M265 15V236" stroke="#92ab8c" stroke-opacity=".15" stroke-dasharray="3 5"/>
-              <ellipse cx="265" cy="125" rx="194" ry="57" transform="rotate(-23 265 125)" stroke="#b8dca0" stroke-opacity=".52"/><ellipse cx="265" cy="125" rx="160" ry="92" transform="rotate(27 265 125)" stroke="#86b397" stroke-opacity=".32"/>
-              <circle cx="265" cy="125" r="66" fill="url(#planet-shade)" stroke="#8cac80" stroke-opacity=".5"/>
-              <ellipse cx="265" cy="125" rx="29" ry="66" stroke="#a8c59a" stroke-opacity=".28" transform="rotate(-17 265 125)"/><ellipse cx="265" cy="125" rx="56" ry="66" stroke="#a8c59a" stroke-opacity=".18" transform="rotate(-17 265 125)"/><ellipse cx="265" cy="125" rx="66" ry="22" stroke="#a8c59a" stroke-opacity=".3" transform="rotate(-17 265 125)"/>
-              <path d="M201 110c25 10 70-1 109-29M219 169c24 1 66-9 108-38" stroke="#a8c59a" stroke-opacity=".2"/><path d="M280 183c54-12 115-41 149-71" stroke="#c4e5a9" stroke-width="1.5"/>
-              <circle cx="421" cy="119" r="4" fill="#c2e898"/><circle cx="421" cy="119" r="10" stroke="#c2e898" stroke-opacity=".25"/><path d="M421 105V73H373" stroke="#99b78b" stroke-opacity=".6"/><text x="328" y="68" fill="#b5c6aa" font-family="monospace" font-size="9" letter-spacing="1">ORBIT / 001</text><circle cx="140" cy="65" r="3" fill="#87ae97"/>
+              <g fill="#fff"><circle cx="30" cy="30" r="1.6"/><circle cx="120" cy="22" r="1.2"/><circle cx="192" cy="46" r="1.6"/><circle cx="340" cy="24" r="1.3"/><circle cx="498" cy="40" r="1.6"/><circle cx="500" cy="170" r="1.3"/><circle cx="470" cy="222" r="1.7"/><circle cx="350" cy="232" r="1.2"/><circle cx="154" cy="226" r="1.4"/><circle cx="26" cy="214" r="1.3"/></g>
+              <ellipse cx="265" cy="125" rx="194" ry="57" transform="rotate(-23 265 125)" stroke="#ffd400" stroke-width="3"/>
+              <ellipse cx="265" cy="125" rx="160" ry="92" transform="rotate(27 265 125)" stroke="#ff8a00" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+              <circle cx="265" cy="125" r="66" fill="#00c2b2" stroke="#14261a" stroke-width="3"/>
+              <clipPath id="earth-clip"><circle cx="265" cy="125" r="64"/></clipPath>
+              <g clip-path="url(#earth-clip)" fill="#b6f500" stroke="#14261a" stroke-width="2.5"><path d="M214 92c14-14 36-20 50-14 10 4 6 16-4 20-8 4-4 14-14 18-12 4-14 18-24 16-10-2-20-30-8-40z"/><path d="M286 118c12-8 34-10 44 0 6 8-2 24-12 30-6 12-20 26-28 18-6-8 2-18-4-26-4-8-6-16 0-22z"/><path d="M270 60c10-4 26-2 30 6-6 6-22 8-30-6z"/></g>
+              <path d="M86.4 200.8A194 57-23 0 0 443.6 49.2" stroke="#ffd400" stroke-width="3"/>
+              <g transform="translate(440 72) rotate(-28)" stroke="#14261a" stroke-width="2"><path d="M-30-7H-11V7H-30ZM11-7H30V7H11Z" fill="#b6f500"/><path d="M-11 0H11" /><rect x="-8" y="-9" width="16" height="18" rx="3" fill="#ff8a00"/></g>
+              <g transform="translate(72 112)" fill="#fff"><path d="M4.6 28.3l1.7 7.3 7.3 1.7-7.3 1.7-1.7 7.3-1.7-7.3-7.3-1.7 7.3-1.7z"/><path d="M-26.8-9.5l1.5 6.7 6.7 1.5-6.7 1.5-1.5 6.7-1.5-6.7-6.7-1.5 6.7-1.5z"/><path d="M-1.9-40.5l1.4 5.8 5.8 1.4-5.8 1.4-1.4 5.8-1.4-5.8-5.8-1.4 5.8-1.4z"/><path d="M23.1-19l1 4.6 4.6 1-4.6 1-1 4.6-1-4.6-4.6-1 4.6-1z"/><circle cx="12.8" cy="5" r="2.2"/></g>
             </svg>
-            <div class="visual-bottomline"><span>Astrodynamics → Earth observation</span><span>RUST</span></div>
+            <div class="visual-bottomline"><span>Astrodynamics → Earth observation</span><span>Rust</span></div>
           </div>
           <div class="research-content">
             <div class="project-title-row"><h3>SpaceDataLab</h3><span class="project-kind">Research initiative</span></div>
             <p class="project-subtitle">Precision, from orbit to observation.</p>
-            <p class="project-description">A Rust-based astrodynamics stack spanning orbit propagation, GNSS, constellation design, and Earth-observation geometry. Grounded in the primary literature.</p>
+            <p class="project-description">Astrodynamics in Rust, with the verification as the deliverable: orbit propagation and determination, GNSS, constellation design, and Earth-observation geometry. Grounded in the primary literature.</p>
             <ul class="tags" aria-label="SpaceDataLab topics"><li>Rust</li><li>Astrodynamics</li><li>Earth observation</li></ul>
             <div class="project-links"><a href="https://spacedatalab.org/">Explore SpaceDataLab <span aria-hidden="true">↗</span></a><a href="https://github.com/SpaceDataLab">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
         <article class="research-card causal-card">
           <div class="project-visual causal-visual" aria-hidden="true">
-            <div class="visual-topline"><span>02 — Causal systems</span><span>ẋ = f + rθ</span></div>
+            <div class="visual-topline"><span>02 — Causal systems</span><span class="formula">ẋ = f + rθ</span></div>
             <svg viewBox="0 0 530 250" fill="none">
-              <defs><pattern id="causal-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#aab498" opacity=".2"/></pattern><marker id="causal-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#b3c692"/></marker></defs>
-              <rect width="530" height="250" fill="url(#causal-grid)"/>
-              <g stroke="#b3c692" stroke-opacity=".55" marker-end="url(#causal-arrow)"><path d="M115 135H214"/><path d="M284 135H408"/><path d="M262 65L416 118" stroke-dasharray="4 5"/><path d="M239 72V108" stroke-dasharray="4 5"/><path d="M431 163V206H97V159"/></g>
-              <rect x="215" y="108" width="70" height="54" rx="4" fill="#273025" stroke="#b7cf95" stroke-opacity=".7"/><circle cx="91" cy="135" r="24" fill="#222a20" stroke="#91a580"/><circle cx="435" cy="135" r="27" fill="#303a28" stroke="#c2d59f"/><circle cx="239" cy="51" r="20" fill="#1b2119" stroke="#96a783" stroke-dasharray="3 4"/>
-              <g fill="#d0ddbc" font-family="monospace" font-size="15" text-anchor="middle"><text x="91" y="140">u</text><text x="250" y="141">f + rθ</text><text x="435" y="140">x′</text><text x="239" y="56" fill="#9aa98c">z</text></g>
-              <g fill="#a9b39a" font-family="monospace" font-size="9" letter-spacing="1" text-anchor="middle"><text x="91" y="95">INTERVENE</text><text x="342" y="123">DYNAMICS</text><text x="435" y="92">OBSERVE</text><text x="262" y="226">FEEDBACK / CONSTRAINED CONTROL</text></g>
+              <defs><marker id="causal-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#14261a" stroke-width="1.6"/></marker></defs>
+              <g stroke="#14261a" stroke-width="2.5" marker-end="url(#causal-arrow)"><path d="M115 135H212"/><path d="M286 135H406"/><path d="M262 65L416 118" stroke-dasharray="5 6"/><path d="M239 72V106" stroke-dasharray="5 6"/><path d="M431 163V206H97V161"/></g>
+              <rect x="215" y="108" width="70" height="54" rx="12" fill="#ff8a00" stroke="#14261a" stroke-width="3"/><circle cx="91" cy="135" r="24" fill="#fff" stroke="#14261a" stroke-width="3"/><circle cx="435" cy="135" r="27" fill="#ffd400" stroke="#14261a" stroke-width="3"/><circle cx="239" cy="51" r="20" fill="#fff" stroke="#14261a" stroke-width="2.5" stroke-dasharray="4 5"/>
+              <g class="diagram-nodes" fill="#14261a" font-family="Fredoka, sans-serif" font-weight="600" font-size="17" text-anchor="middle"><text x="91" y="141">u</text><text x="250" y="141">f + rθ</text><text x="435" y="141">x′</text><text x="239" y="57">z</text></g>
+              <g class="diagram-edges" fill="#14261a" font-family="Fredoka, sans-serif" font-weight="600" font-size="12" letter-spacing=".6" text-anchor="middle"><text x="91" y="97">INTERVENE</text><text x="346" y="158">DYNAMICS</text><text x="435" y="92">OBSERVE</text><text x="262" y="228">FEEDBACK / CONSTRAINED CONTROL</text></g>
             </svg>
-            <div class="visual-bottomline"><span>Observation → Intervention → Control</span><span>JAX / PYTHON</span></div>
+            <div class="visual-bottomline"><span>Observation → Intervention → Control</span><span>JAX / Python</span></div>
           </div>
           <div class="research-content">
             <div class="project-title-row"><h3>CausalDyn</h3><span class="project-kind">Research software</span></div>
@@ -100,23 +194,34 @@
       <div class="subsection-heading"><h3>Tools for the working scientist</h3><span class="eyebrow">Rust performance. Python ergonomics.</span></div>
       <div class="tools-grid">
         <article class="tool-card">
-          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><g fill="currentColor"><circle cx="8" cy="10" r="2"/><circle cx="15" cy="7" r="2"/><circle cx="11" cy="17" r="2"/><circle cx="22" cy="21" r="2"/><circle cx="29" cy="18" r="2"/><circle cx="26" cy="28" r="2"/></g><path d="M8 10L15 7L11 17Z M22 21L29 18L26 28Z" stroke="currentColor" stroke-opacity=".4"/></svg><span class="eyebrow">01 / Clustering</span></div>
+          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><g fill="currentColor"><circle cx="8" cy="10" r="2.4"/><circle cx="15" cy="7" r="2.4"/><circle cx="11" cy="17" r="2.4"/><circle cx="22" cy="21" r="2.4"/><circle cx="29" cy="18" r="2.4"/><circle cx="26" cy="28" r="2.4"/></g><path d="M8 10L15 7L11 17Z M22 21L29 18L26 28Z" stroke="currentColor" stroke-width="1.5"/></svg><span class="eyebrow">01 / Clustering</span></div>
           <h4>betula-cluster</h4><p>Turn large embedding datasets into compact, numerically stable microclusters. A Rust core with a scikit-learn-style Python API.</p>
           <ul class="tags" aria-label="betula-cluster technologies"><li>Rust + Python</li><li>Streaming</li><li>Machine learning</li></ul>
           <div class="project-links"><a href="https://github.com/ilgrad/betula-cluster">Source code <span aria-hidden="true">↗</span></a><a href="https://ilgrad.github.io/betula-cluster/">Documentation <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="tool-card">
-          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M8 8H18V18H28M18 18H8M18 18V28H28" stroke="currentColor" stroke-opacity=".65"/><path d="M5 5H11V11H5Z M25 15H31V21H25Z M5 15H11V21H5Z M25 25H31V31H25Z" fill="var(--panel)" stroke="currentColor"/></svg><span class="eyebrow">02 / Indexing</span></div>
+          <div class="tool-topline"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M8 8H18V18H28M18 18H8M18 18V28H28" stroke="currentColor" stroke-width="1.5"/><path d="M5 5H11V11H5Z M25 15H31V21H25Z M5 15H11V21H5Z M25 25H31V31H25Z" fill="#fff" stroke="currentColor" stroke-width="1.5"/></svg><span class="eyebrow">02 / Indexing</span></div>
           <h4>lexindex</h4><p>Compact string-to-ID indexes built in Rust. Fast lookups, prefix and fuzzy search, with memory-mapped storage and Python bindings.</p>
           <ul class="tags" aria-label="lexindex technologies"><li>Rust + Python</li><li>FST / MPH</li><li>Data infrastructure</li></ul>
           <div class="project-links"><a href="https://github.com/ilgrad/lexindex">Source code <span aria-hidden="true">↗</span></a><a href="https://ilgrad.github.io/lexindex/">Documentation <span aria-hidden="true">↗</span></a></div>
         </article>
       </div>
       <div class="subsection-heading explorations-heading"><h3>Further explorations</h3><a class="text-link" href="https://github.com/ilgrad?tab=repositories">All repositories <span aria-hidden="true">↗</span></a></div>
-      <a class="exploration" href="https://github.com/ilgrad/large-wave-effect"><span class="exploration-index">01</span><div><h4>Large Wave Effect</h4><p>How a local impulse becomes a large wave in a discrete chain.</p></div><span class="exploration-field">Mathematical research</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
-      <a class="exploration" href="https://github.com/ilgrad/overnight-finance-classification"><span class="exploration-index">02</span><div><h4>Overnight Finance Classification</h4><p>Ensembles and calibration for imbalanced financial time series.</p></div><span class="exploration-field">Applied machine learning</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+      <div class="exploration-list">
+        <a class="exploration" href="https://github.com/ilgrad/large-wave-effect"><span class="exploration-index">01</span><div><h4>Large Wave Effect</h4><p>How a local impulse becomes a large wave on a discrete ring. My undergraduate thesis, reopened eleven years later.</p></div><span class="exploration-field">Mathematical research</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+        <a class="exploration" href="https://github.com/ilgrad/string-index-benchmarks"><span class="exploration-index">02</span><div><h4>String Index Benchmarks</h4><p>One protocol, thirteen corpora: a reproducible comparison of compressed string dictionaries.</p></div><span class="exploration-field">Reproducible benchmarks</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+        <a class="exploration" href="https://github.com/ilgrad/overnight-finance-classification"><span class="exploration-index">03</span><div><h4>Overnight Finance Classification</h4><p>Ensembles and calibration for imbalanced financial time series.</p></div><span class="exploration-field">Applied machine learning</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="subsection-heading explorations-heading"><h3>Writing</h3><a class="text-link" href="https://medium.com/@ilgrad">All posts on Medium <span aria-hidden="true">↗</span></a></div>
+      <div class="exploration-list">
+        <a class="exploration" href="https://medium.com/@ilgrad/i-said-beating-marisa-trie-would-take-a-second-marisa-it-took-a-codec-39f033eb116a"><span class="exploration-index">01</span><div><h4>I said beating marisa-trie would take a second marisa. It took a codec.</h4></div><span class="exploration-field">lexindex</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+        <a class="exploration" href="https://medium.com/@ilgrad/clustering-a-million-points-in-0-2-seconds-and-57-mb-and-why-the-math-matters-90fcb9555442"><span class="exploration-index">02</span><div><h4>Clustering a million points in 0.2 seconds and 57 MB — and why the math matters</h4></div><span class="exploration-field">betula-cluster</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+        <a class="exploration" href="https://medium.com/@ilgrad/eleven-years-later-i-reopened-my-undergrad-math-thesis-with-an-ai-and-a-stack-of-open-source-8db53d6769e4"><span class="exploration-index">03</span><div><h4>Eleven years later, I reopened my undergrad math thesis</h4></div><span class="exploration-field">Large Wave Effect</span><span class="exploration-arrow" aria-hidden="true">↗</span></a>
+      </div>
     </section>
 
+    <div class="wave wave-to-about" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M-10 40H0C120 12 240 12 360 36S600 66 720 40 960 10 1080 34 1320 62 1440 34H1450V90H-10Z" fill="#f0ffc8" stroke="#14261a" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="about-band">
     <section class="about-section wrap" id="about" aria-labelledby="about-title">
       <div class="about-intro"><p class="eyebrow section-number">02 / A bit about me</p><h2 id="about-title">Curiosity, with<br><span>an implementation.</span></h2></div>
       <div class="about-copy">
@@ -149,8 +254,17 @@
         <div><h3 class="eyebrow">Education / 2010–2015</h3><h4>Applied Mathematics &amp; Computer Science</h4><p>Specialist degree<br>Moscow State University of Transport (MIIT)</p></div>
       </div>
     </section>
+    </div>
+    <div class="wave wave-to-contact" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M-10 34H0C120 62 240 62 360 38S600 8 720 34 960 64 1080 40 1320 12 1440 40H1450V90H-10Z" fill="#3cc21e" stroke="#14261a" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="contact-band">
     <section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow section-number">03 / Elsewhere</p><h2 id="contact-title">Have an interesting problem?</h2><p>I’d love to hear about it.</p></div><div class="contact-links"><a href="https://www.linkedin.com/in/ilgrad/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://t.me/ilgrad">Telegram <span aria-hidden="true">↗</span></a><a href="https://medium.com/@ilgrad">Writing on Medium <span aria-hidden="true">↗</span></a><a href="https://github.com/ilgrad">GitHub <span aria-hidden="true">↗</span></a></div></section>
+    </div>
   </main>
-  <footer class="site-footer wrap"><span>© <span id="year">2026</span> Ilia Gradina</span><span class="footer-note">Always curious. Usually building.</span><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <div class="footer-band">
+  <footer class="site-footer wrap">
+    <div class="footer-row"><span>© <span id="year">2026</span> Ilia Gradina</span><span class="footer-note">Always curious. Usually building. Mascot: a platypus, the original outlier.</span><a href="#">Swim back to top <span aria-hidden="true">↑</span></a></div>
+    <p class="palette"><span class="palette-label">Colours</span><span style="--dot:#ff8a00">outback sunset</span><span style="--dot:#ffd400" lang="mi">kōwhai</span><span style="--dot:#b6f500">kiwifruit</span><span style="--dot:#3cc21e">fern</span><span style="--dot:#00c2b2" lang="mi">pāua</span><span style="--dot:#e3173e" lang="mi">pōhutukawa</span></p>
+  </footer>
+  </div>
 </body>
 </html>
