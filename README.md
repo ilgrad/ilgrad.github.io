@@ -17,7 +17,7 @@ Open http://localhost:8000. The site also works by opening index.html directly.
 - styles.css — responsive layout, print styles, and reduced-motion support.
 - site.js — deterministic k-means illustration on synthetic points, not a BETULA benchmark;
   Barnsley fern; platypus facts.
-- assets/ — favicon and self-hosted Manrope and Fredoka fonts (SIL Open Font License).
+- assets/ — favicon, social card, and self-hosted Manrope and Fredoka fonts (SIL Open Font License).
 
 Project links and text are intentionally static: the page makes no GitHub API
 requests and does not depend on rate limits or a third-party service.
